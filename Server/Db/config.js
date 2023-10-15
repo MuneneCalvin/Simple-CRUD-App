@@ -11,7 +11,6 @@ const {
     SQL_SERVER,
 } = process.env;
 
-const sqlEncrypt = process.env.SQL_ENCRYPT === "true";
 
 assert(PORT, "PORT is required");
 
@@ -23,8 +22,8 @@ const config = {
         user: SQL_USER,
         password: SQL_PASSWORD,
         options: {
-            encrypt: sqlEncrypt,
-            enableArithAbort: true,
+            encrypt: true,
+            trustServerCertificate: false,
         },
     },
 };

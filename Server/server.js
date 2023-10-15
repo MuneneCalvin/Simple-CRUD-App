@@ -1,8 +1,6 @@
 import dotenv from "dotenv"
 import express from "express"
-// import mssql from "mssql"
 import cors from "cors"
-// import config from "./Db/config.js";
 import Routes from "./Routes/routes.js";
 
 const app = express();
